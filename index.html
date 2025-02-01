@@ -48,12 +48,28 @@
     .sora {
       font-family: "Sora", serif;
     }
+
+    @keyframes text-anime {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-text-anime {
+      animation: text-anime 1s ease-out infinite alternate;
+    }
   </style>
 </head>
 
 <body>
   <!-- header section -->
-  <header class=" ">
+  <header class="">
     <!-- navbar section -->
     <nav class=" bg-secondary sora mb-16 border-b-2 border-black lg:border-hidden">
       <div class=" container mx-auto navbar ">
@@ -117,7 +133,7 @@
       <div class="bg-[url(c1-assets/cat-big.png)] bg-contain bg-no-repeat bg-bottom h-full">
         <div class="hero">
           <div class="hero-content absolute lg:-left-5 lg:-top-5 -top-12">
-            <div>
+            <div class="animate-text-anime">
               <h1 class="lg:text-6xl text-3xl font-normal ADLaM">Pamper Your Pet, <br>
                 Because They Deserve <br> the Best</h1>
               <p class="py-6">
@@ -132,11 +148,15 @@
     </div>
 
   </header>
+
+
+
+
   <!-- main section -->
   <main class="">
     <!-- categories section -->
     <!-- header section in card -->
-    <section class="container mx-auto ">
+    <section class="container mx-auto">
       <div class="mt-16 mb-24 ml-4 mr-4 lg:mr-0 lg:ml-0">
         <h1 class="text-4xl font-normal ADLaM text-black mb-8 lg:mb-12">Browse By Categories</h1>
         <!-- cards -->
@@ -236,7 +256,7 @@
     </section>
 
     <!-- product section -->
-    <section class="lg:bg-secondary mb-24 lg:h-[900px]">
+    <section class="lg:bg-secondary mb-24 lg:h-[900px] ">
       <div class="container mx-auto">
         <div class="ml-3 mr-3 ">
           <h1 class="text-4xl font-normal ADLaM text-black mb-12 lg:pt-40">Trending Pet Products</h1>
@@ -359,46 +379,79 @@
       </div>
     </section>
 
+    <!-- extra section -->
+
+    <section class="flex flex-col container mx-auto mb-24">
+      <div class="mx-4">
+        <h1 class="text-4xl font-normal  ADLaM text-[#111111] mb-12">Other Dogs is hear</h1>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div class="card ">
+          <img class="card" src="c1-assets/download (2).jpg" alt="">
+          <h3 class="text-3xl font-normal text-[#111111] my-8">German Shepherd</h3>
+          <p class="text-lg font-normal">The German Shepherd, also known in Britain as an Alsatian, is a German breed of
+            working dog of medium to large size.</p>
+            <button class="btn text-lg font-bold bg-accent w-40 mt-3 rounded-xl" >View More</button>
+        </div>
+        <div class="card">
+          <img class="card" src="c1-assets/download (1).jpg" alt="">
+          <h3 class="text-3xl font-normal text-[#111111] my-8">Bulldog</h3>
+          <p class="text-lg font-normal">The Bulldog is a British breed of dog of mastiff type. It may also be known as
+            the English Bulldog or British Bulldog.</p>
+            <button class="btn  text-lg font-bold bg-accent w-40 mt-3 rounded-xl" >View More</button>
+        </div>
+        <div class="card ">
+          <img class="card" src="c1-assets/download (2).jpg" alt="">
+          <h3 class="text-3xl font-normal text-[#111111] my-8">Labrador Retriever</h3>
+          <p class="text-lg font-normal">The Labrador Retriever or simply Labrador is a British breed of retriever gun
+            dog.</p>
+            <button class="btn  text-lg font-bold bg-accent w-40 mt-3 rounded-xl" >View More</button>
+
+        </div>
+      </div>
+      </div>
+    </section>
+
+
     <!-- discount price section -->
-    <section class="container mx-auto">
-      <section class="max-w-screen-xl mx-auto mt-16 mb-24 px-4">
+    <section class="container mx-auto ">
+      <section class=" mt-16 mb-24 px-4">
         <h1 class="text-4xl font-normal font-ADLaM text-[#111111] mb-12">Everyday low Price</h1>
         <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-5 gap-y-5">
-          <div class="bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] lg:col-span-2 relative lg:p-36 py-20 lg:!pl-24 pl-10 rounded-xl">
-            <div class="relative -top-12">
+          <div
+            class="bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] lg:col-span-2 relative lg:p-36 py-20 lg:pl-24 pl-10 rounded-xl h-[300px] lg:h-auto">
+            <div class="relative -top-16">
               <p class="text-xl font-normal hidden lg:flex">Under Price</p>
-              <h2 class="lg:text-3xl text-2xl font-bold ">Pet Grooming Mitt</h2>
+              <h2 class="lg:text-3xl text-2xl font-bold">Pet Grooming Mitt</h2>
               <h4 class="text-2xl font-bold text-white hidden lg:flex">(Easy Hair Removal)</h4>
               <h1 class="text-5xl font-bold">$7.99</h1>
             </div>
-            <div class="absolute -top-32 -right-24 lg:-top-10 lg:right-0">
+            <div class="absolute -top-12 justify-end -right-4 lg:-top-10 lg:right-0">
+              <!-- absolute -top-32 -right-24 lg:-top-10 lg:right-0 -->
               <img class="scale-50 lg:scale-90" src="c1-assets/cute-dog-mid.png" alt="">
             </div>
           </div>
-          <div class=" bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] relative  lg:p-20 py-20 !pl-10 rounded-xl">
-            <div class="relative -top-12">
+          <div
+            class=" bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] relative  lg:p-20 py-20 pl-10 rounded-xl h-[300px] lg:h-auto">
+            <div class="relative -top-16">
               <h2 class="lg:text-3xl text-2xl font-bold ">T-Shirt for Dogs</h2>
               <h1 class="text-5xl font-bold text-[#FFDC26]">$7.99</h1>
             </div>
-            <div class="justify-end absolute -top-20 -right-10 lg:top-20 lg:right-0">
+            <div class="absolute -top-8 justify-end -right-4 g:top-20 lg:right-0">
               <img class="scale-50 lg:scale-75" src="c1-assets/cute-pet-mid.png" alt="">
             </div>
           </div>
-          
+          <!-- justify-end absolute -top-20 -right-10 lg:top-20 lg:right-0 -->
         </div>
       </section>
     </section>
   </main>
 
   <!-- some news  -->
-
-  <section class="max-w-screen-xl mx-auto">
+  <section class="container mx-auto ">
     <div class="bg-[#FFF9F4] rounded-2xl relative top-56 -mt-52 mx-5">
       <div class="hero">
         <div class="hero-content flex-col lg:flex-row">
-          <img
-            src="c1-assets/cute-pet-mid.png"
-            class="" />
+          <img src="c1-assets/cute-pet-mid.png" class="" />
           <div class="lg:pl-20 pl-2">
             <h1 class="lg:text-5xl text-2xl font-bold text-center">Get Pawsome News!</h1>
             <p class="py-6 text-lg">
@@ -414,39 +467,41 @@
     </div>
   </section>
   <!-- footer section -->
-<section class="bg-[#FFDC2680] ">
-  <footer class="max-w-screen-xl mx-auto footer p-10 mt-0 pt-80">
-    <nav class="">
-      <div class="flex items-center gap-3">
-        <img src="c1-assets/logo-footer.png" alt="" class="w-10 h-10">
-        <h4 class="text-2xl font-normal">Browse<span class="text-[#FFDC26]">4</span>Pets</h4>
-      </div>
-      <p class="text-lg font-normal">Discover a world of treats, toys, and <br> essentials handpicked for your furry <br> friends</p>
-    </nav>
-    <nav class=" text-xl font-normal">
-      <a class="link link-hover">Find a pet</a>
-      <a class="link link-hover">Breeds</a>
-      <a class="link link-hover">Contact us</a>
-    </nav>
-    <nav class="">
-      <p class="text-base font-medium">Follow Us</p>
-      <div class="grid grid-flow-col gap-4 text-lg">
-        <a>
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a>
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a>
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a>
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </div>
-    </nav>
-  </footer>
-</section>
+  <section class="bg-[#FFDC2680] ">
+    <footer class="container mx-auto footer p-10 mt-0 pt-80">
+      <nav class="">
+        <div class="flex items-center gap-3">
+          <img src="c1-assets/logo-footer.png" alt="" class="w-10 h-10">
+          <h4 class="text-2xl font-normal">Browse<span class="text-[#FFDC26]">4</span>Pets</h4>
+        </div>
+        <p class="text-lg font-normal">Discover a world of treats, toys, and <br> essentials handpicked for your furry
+          <br> friends
+        </p>
+      </nav>
+      <nav class=" text-xl font-normal">
+        <a class="link link-hover">Find a pet</a>
+        <a class="link link-hover">Breeds</a>
+        <a class="link link-hover">Contact us</a>
+      </nav>
+      <nav class="">
+        <p class="text-base font-medium">Follow Us</p>
+        <div class="grid grid-flow-col gap-4 text-lg">
+          <a>
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a>
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a>
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a>
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </nav>
+    </footer>
+  </section>
 </body>
 
 </html>
